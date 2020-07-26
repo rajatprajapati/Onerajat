@@ -1,0 +1,11 @@
+{
+  "name": "rajatprajapati",
+  "version": "1.0.0",
+  "description": "portfolio/CV",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
