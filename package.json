@@ -1,11 +1,37 @@
 {
-  "name": "rajatprajapati",
-  "version": "1.0.0",
-  "description": "portfolio/CV",
-  "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC"
+    "name": "onerajat",
+    "version": "1.0.0",
+    "description": "portfolio/cv",
+    "main": "index.html",
+    "dependencies": {
+        "bootstrap": "^4.5.0",
+        "lite-server": "^2.5.4",
+        "social": "^0.4.0"
+    },
+    "devDependencies": {
+        "bootstrap-social": "^5.1.1",
+        "font-awesome": "^4.7.0",
+        "lite-server": "^2.5.4",
+        "node-sass": "^4.14.1",
+        "onchange": "^7.0.2",
+        "parallelshell": "^3.0.2"
+    },
+    "scripts": {
+        "start": "npm run watch:all",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lite": "lite-server",
+        "scss": "node-sass -o resources/css resources/css/",
+        "watch:scss": "onchange \"resources/css/*.scss\" -- npm run scss",
+        "watch:all": "parallelshell \"npm run lite\" \"npm run watch:scss\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rajatprajapati/Onerajat.git"
+    },
+    "author": "Bhavesh Khivesara",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/rajatprajapati/Onerajat/issues"
+    },
+    "homepage": "https://github.com/rajatprajapati/Onerajat#readme"
 }
