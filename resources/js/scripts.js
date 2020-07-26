@@ -16,3 +16,5 @@ $(document).ready(function() {
         }
     });
 });
+
+$('.fa').attr("aria-hidden", "false")

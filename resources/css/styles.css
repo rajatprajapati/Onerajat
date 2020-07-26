@@ -8,8 +8,8 @@
   font-family: "avenir";
   font-display: swap; }
 
-* {
-  font-family: "futura" !important; }
+*:not(.navbar-brand) {
+  font-family: "futura"; }
 
 *:focus,
 *:active {
@@ -21,11 +21,14 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "avenir" !important;
+  font-family: "avenir";
   font-weight: 900; }
 
 .row {
   width: 100%; }
+
+.btn {
+  font-family: "Font Awesome 5 Free"; }
 
 nav {
   background-color: #414142;
@@ -44,6 +47,8 @@ nav {
     transition: all .2s ease-in-out;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
+    background-color: white; }
+  nav div .navdisplay div {
     background-color: #ed1c24; }
   nav div .navhide:before {
     transform: translateY(9px) rotate(135deg); }
@@ -78,10 +83,18 @@ nav {
   width: fit-content; }
 
 .navbar-brand {
-  width: fit-content; }
+  width: fit-content;
+  text-decoration: none;
+  color: white;
+  font-weight: 900; }
   .navbar-brand img {
     height: 70px;
     width: 54px; }
+  .navbar-brand span {
+    color: #ed1c24; }
+
+.navbar-brand:hover {
+  color: white; }
 
 @media screen and (max-width: 766px) {
   nav.navbar.navbar-inverse {
@@ -100,9 +113,13 @@ nav {
             width: 100%;
             font-weight: 900; }
           nav.navbar.navbar-inverse div.navbar.navbar-expand-md div.collapse.navbar-collapse ul .active {
-            background-color: #ed1c24; }
+            background-color: #ed1c24;
+            transition: 1s; }
           nav.navbar.navbar-inverse div.navbar.navbar-expand-md div.collapse.navbar-collapse ul .active:after {
-            display: none; }
+            margin: 0px;
+            width: 0px;
+            height: 0px;
+            background-color: transparent; }
   .navbar-brand {
     margin: 5px;
     margin-left: 20px; }
