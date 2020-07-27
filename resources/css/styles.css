@@ -18,7 +18,6 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "avenir";
   font-weight: 900; }
 
 .row {
@@ -40,7 +39,8 @@ h6 {
 
 nav {
   background-color: #414142;
-  color: #ff2800; }
+  color: #ff2800;
+  box-shadow: 4px 7px white; }
   nav div a.navbar-brand {
     font-family: "futura"; }
   nav div .navdisplay {
@@ -116,9 +116,9 @@ nav {
   animation-name: navanimate;
   animation-duration: 0.5s; }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1280px) {
   nav div div ul a {
-    font-size: medium; } }
+    font-size: small; } }
 
 @media screen and (max-width: 766px) {
   nav.navbar.navbar-inverse {
@@ -154,11 +154,44 @@ nav {
     margin-right: 15px; } }
 
 #body .col-sm-6:nth-child(1) {
-  background-image: url(./resources/img/logo.jpg);
-  padding: 0px; }
+  background-image: url(../img/logo.jpg);
+  padding: 0px;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; }
+  #body .col-sm-6:nth-child(1) .frame {
+    width: 80%;
+    height: 50%; }
+
+#body .col-sm-6:nth-child(2) {
+  height: 100vh;
+  padding: 30px;
+  background-color: white; }
+  #body .col-sm-6:nth-child(2) .container {
+    padding: 15px;
+    height: 100%; }
+  #body .col-sm-6:nth-child(2) .name {
+    color: #414142;
+    text-align: center;
+    font-family: "avenir";
+    font-size: xxx-large; }
+    #body .col-sm-6:nth-child(2) .name span {
+      color: #ff2800; }
+  #body .col-sm-6:nth-child(2) .designation {
+    font-family: "futura";
+    text-align: center;
+    font-size: x-large; }
 
 @media screen and (max-width: 766px) {
-  #body .col-sm-6:nth-child(2) .frame {
-    position: absolute;
-    top: 30%;
-    height: 60%; } }
+  #body .col-sm-6:nth-child(1) {
+    height: 50vh;
+    background-attachment: scroll;
+    background-size: cover; }
+  #body .col-sm-6:nth-child(2) {
+    height: 50vh; }
+    #body .col-sm-6:nth-child(2) .name {
+      font-size: xx-large; }
+    #body .col-sm-6:nth-child(2) .designation {
+      font-size: large; } }

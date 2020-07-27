@@ -1,242 +1,282 @@
-                $red: #ff2800;
-                $grey: #414142;
-                $min-margin: 5px;
-                $med-margin: 10px;
-                $high-margin: 20px;
-                @font-face {
-                    src: url(../fonts/futura.ttf);
-                    font-family: "futura";
-                    font-display: swap;
+$red: #ff2800;
+$grey: #414142;
+$min-margin: 5px;
+$med-margin: 10px;
+$high-margin: 20px;
+@font-face {
+    src: url(../fonts/futura.ttf);
+    font-family: "futura";
+    font-display: swap;
+}
+
+@font-face {
+    src: url(../fonts/avenir.otf);
+    font-family: "avenir";
+    font-display: swap;
+}
+
+$futura: "futura";
+$avenir: "avenir";
+*:focus,
+*:active {
+    outline: none!important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    // font-family: $avenir;
+    font-weight: 900;
+}
+
+.row {
+    width: 100%;
+    margin: 0px;
+}
+
+.container-fluid {
+    padding: 0px;
+}
+
+// nav
+.btn-instagram,
+.btn-twitter,
+.btn-facebook,
+.btn-linkedin {
+    background-color: transparent!important;
+    border: none;
+}
+
+.btn {
+    padding: .2rem .5rem;
+}
+
+nav {
+    background-color: $grey;
+    color: $red;
+    box-shadow: 4px 7px white;
+    div {
+        a.navbar-brand {
+            font-family: $futura;
+        }
+        .navdisplay {
+            width: 60px;
+            height: 60px;
+            // right: $med-margin+5;
+            // top: $med-margin+10;
+            // position: absolute;
+        }
+        .navdisplay:before,
+        .navdisplay div,
+        .navdisplay:after {
+            border-radius: 3px;
+            content: '';
+            display: block;
+            height: 5px;
+            margin: 6px 0;
+            transition: all .2s ease-in-out;
+            -webkit-transition: all .2s ease-in-out;
+            -moz-transition: all .2s ease-in-out;
+            background-color: white;
+        }
+        .navdisplay div {
+            background-color: $red;
+        }
+        .navhide:before {
+            transform: translateY(9px) rotate(135deg);
+        }
+        .navhide:after {
+            transform: translateY(-10px) rotate(-135deg);
+        }
+        .navhide div {
+            transform: scale(0);
+        }
+        div {
+            color: $red!important;
+            ul {
+                .active:after {
+                    border-radius: 3px;
+                    content: '';
+                    display: block;
+                    height: 5.5px;
+                    margin: 4px 0;
+                    transition: all .2s ease-in-out;
+                    -webkit-transition: all .2s ease-in-out;
+                    -moz-transition: all .2s ease-in-out;
+                    background-color: $red;
                 }
-                
-                @font-face {
-                    src: url(../fonts/avenir.otf);
-                    font-family: "avenir";
-                    font-display: swap;
+                a {
+                    text-align: center;
+                    color: floralwhite;
+                    margin: $med-margin;
+                    text-transform: uppercase;
+                    font-size: large;
+                    letter-spacing: 2px;
                 }
-                
-                $futura: "futura";
-                $avenir: "avenir";
-                *:focus,
-                *:active {
-                    outline: none!important;
-                }
-                
-                h1,
-                h2,
-                h3,
-                h4,
-                h5,
-                h6 {
-                    font-family: $avenir;
-                    font-weight: 900;
-                }
-                
-                .row {
-                    width: 100%;
-                    margin: 0px;
-                }
-                
-                .container-fluid {
-                    padding: 0px;
-                }
-                
-                // nav
-                .btn-instagram,
-                .btn-twitter,
-                .btn-facebook,
-                .btn-linkedin {
-                    background-color: transparent!important;
-                    border: none;
-                }
-                
-                .btn {
-                    padding: .2rem .5rem;
-                }
-                
-                nav {
-                    background-color: $grey;
-                    color: $red;
-                    div {
-                        a.navbar-brand {
-                            font-family: $futura;
-                        }
-                        .navdisplay {
-                            width: 60px;
-                            height: 60px;
-                            // right: $med-margin+5;
-                            // top: $med-margin+10;
-                            // position: absolute;
-                        }
-                        .navdisplay:before,
-                        .navdisplay div,
-                        .navdisplay:after {
-                            border-radius: 3px;
-                            content: '';
-                            display: block;
-                            height: 5px;
-                            margin: 6px 0;
-                            transition: all .2s ease-in-out;
-                            -webkit-transition: all .2s ease-in-out;
-                            -moz-transition: all .2s ease-in-out;
-                            background-color: white;
-                        }
-                        .navdisplay div {
-                            background-color: $red;
-                        }
-                        .navhide:before {
-                            transform: translateY(9px) rotate(135deg);
-                        }
-                        .navhide:after {
-                            transform: translateY(-10px) rotate(-135deg);
-                        }
-                        .navhide div {
-                            transform: scale(0);
-                        }
-                        div {
-                            color: $red!important;
-                            ul {
-                                .active:after {
-                                    border-radius: 3px;
-                                    content: '';
-                                    display: block;
-                                    height: 5.5px;
-                                    margin: 4px 0;
-                                    transition: all .2s ease-in-out;
-                                    -webkit-transition: all .2s ease-in-out;
-                                    -moz-transition: all .2s ease-in-out;
-                                    background-color: $red;
-                                }
-                                a {
-                                    text-align: center;
-                                    color: floralwhite;
-                                    margin: $med-margin;
-                                    text-transform: uppercase;
-                                    font-size: large;
-                                    letter-spacing: 2px;
-                                }
-                                a:hover {
-                                    color: white;
-                                    text-decoration: none;
-                                }
-                            }
-                        }
-                    }
-                }
-                
-                .collapse.navbar-collapse {
-                    width: fit-content;
-                }
-                
-                .navbar-brand {
-                    width: fit-content;
-                    text-decoration: none;
+                a:hover {
                     color: white;
-                    font-weight: 900;
-                    img {
-                        height: 70px;
-                        width: 54px;
-                    }
-                    div:nth-child(2) {
-                        color: white!important;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+.collapse.navbar-collapse {
+    width: fit-content;
+}
+
+.navbar-brand {
+    width: fit-content;
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+    img {
+        height: 70px;
+        width: 54px;
+    }
+    div:nth-child(2) {
+        color: white!important;
+    }
+}
+
+.navbar-brand:hover {
+    color: white
+}
+
+@keyframes navanimate {
+    from {
+        transform: translateY(-100px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+.navanimate {
+    animation-name: navanimate;
+    animation-duration: 0.5s;
+    // animation-timing-function: ease-in-out;
+}
+
+@media screen and (max-width:1280px) {
+    nav {
+        div {
+            div {
+                ul {
+                    a {
+                        font-size: small;
                     }
                 }
-                
-                .navbar-brand:hover {
-                    color: white
-                }
-                
-                @keyframes navanimate {
-                    from {
-                        transform: translateY(-100px);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 766px) {
+    nav.navbar.navbar-inverse {
+        padding: 0px;
+        div.container {
+            padding: 0px;
+        }
+        div.navbar.navbar-expand-md {
+            width: 100%;
+            padding: 0px;
+            div.collapse.navbar-collapse {
+                padding: 0px;
+                ul {
+                    padding: 0px;
+                    a.nav-link {
+                        padding: $high-margin;
+                        margin: 0px -47px;
+                        width: 100%;
+                        font-size: large;
                     }
-                    to {
-                        transform: translateY(0px);
+                    .active {
+                        background-color: $red;
+                        transition: 0s;
                     }
-                }
-                
-                .navanimate {
-                    animation-name: navanimate;
-                    animation-duration: 0.5s;
-                    // animation-timing-function: ease-in-out;
-                }
-                
-                @media screen and (max-width:767px) {
-                    nav {
-                        div {
-                            div {
-                                ul {
-                                    a {
-                                        font-size: medium;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                
-                @media screen and (max-width: 766px) {
-                    nav.navbar.navbar-inverse {
-                        padding: 0px;
-                        div.container {
-                            padding: 0px;
-                        }
-                        div.navbar.navbar-expand-md {
-                            width: 100%;
-                            padding: 0px;
-                            div.collapse.navbar-collapse {
-                                padding: 0px;
-                                ul {
-                                    padding: 0px;
-                                    a.nav-link {
-                                        padding: $high-margin;
-                                        margin: 0px -47px;
-                                        width: 100%;
-                                        font-size: large;
-                                    }
-                                    .active {
-                                        background-color: $red;
-                                        transition: 0s;
-                                    }
-                                    .active:after {
-                                        background-color: transparent;
-                                        height: 0px;
-                                        margin: 0px;
-                                        // content: none;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    .navbar-brand {
-                        margin: 5px;
-                        margin-left: $med-margin*2;
-                        img {
-                            height: 63px;
-                            width: 48.6px;
-                        }
-                    }
-                    .navdisplay {
-                        margin-right: 15px;
+                    .active:after {
+                        background-color: transparent;
+                        height: 0px;
+                        margin: 0px;
+                        // content: none;
                     }
                 }
-                
-                // body
-                #body {
-                    .col-sm-6:nth-child(1) {
-                        background-image: url(./resources/img/logo.jpg);
-                        padding: 0px;
-                    }
-                }
-                
-                @media screen and (max-width: 766px) {
-                    #body {
-                        .col-sm-6:nth-child(2) {
-                            .frame {
-                                position: absolute;
-                                top: 30%;
-                                height: 60%;
-                            }
-                        }
-                    }
-                }
+            }
+        }
+    }
+    .navbar-brand {
+        margin: 5px;
+        margin-left: $med-margin*2;
+        img {
+            height: 63px;
+            width: 48.6px;
+        }
+    }
+    .navdisplay {
+        margin-right: 15px;
+    }
+}
+
+// body
+#body {
+    .col-sm-6:nth-child(1) {
+        background-image: url(../img/logo.jpg);
+        padding: 0px;
+        height: 100vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        .frame {
+            width: 80%;
+            height: 50%;
+        }
+    }
+    .col-sm-6:nth-child(2) {
+        height: 100vh;
+        padding: 30px;
+        background-color: white;
+        .container {
+            padding: 15px;
+            height: 100%;
+        }
+        .name {
+            color: $grey;
+            text-align: center;
+            font-family: $avenir;
+            font-size: xxx-large;
+            span {
+                color: $red;
+            }
+        }
+        .designation {
+            font-family: $futura;
+            text-align: center;
+            font-size: x-large;
+        }
+    }
+}
+
+@media screen and (max-width:766px) {
+    #body {
+        .col-sm-6:nth-child(1) {
+            height: 50vh;
+            background-attachment: scroll;
+            background-size: cover;
+        }
+        .col-sm-6:nth-child(2) {
+            height: 50vh;
+            .name {
+                font-size: xx-large;
+            }
+            .designation {
+                font-size: large;
+            }
+        }
+    }
+}
