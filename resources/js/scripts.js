@@ -15,6 +15,11 @@ $(document).ready(function() {
             $('#navbutton').addClass('navhide');
         }
     });
+    if (window.matchMedia("(max-width: 766px)").matches) {
+        $('.nav-link').click(function() {
+            $('.navdisplay').click();
+        });
+    }
 });
 
 $('.fa').attr("aria-hidden", "false")

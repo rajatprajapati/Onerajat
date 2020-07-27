@@ -8,9 +8,6 @@
   font-family: "avenir";
   font-display: swap; }
 
-*:not(.navbar-brand) {
-  font-family: "futura"; }
-
 *:focus,
 *:active {
   outline: none !important; }
@@ -25,14 +22,27 @@ h6 {
   font-weight: 900; }
 
 .row {
-  width: 100%; }
+  width: 100%;
+  margin: 0px; }
+
+.container-fluid {
+  padding: 0px; }
+
+.btn-instagram,
+.btn-twitter,
+.btn-facebook,
+.btn-linkedin {
+  background-color: transparent !important;
+  border: none; }
 
 .btn {
-  font-family: "Font Awesome 5 Free"; }
+  padding: .2rem .5rem; }
 
 nav {
   background-color: #414142;
-  color: #ed1c24; }
+  color: #ff2800; }
+  nav div a.navbar-brand {
+    font-family: "futura"; }
   nav div .navdisplay {
     width: 60px;
     height: 60px; }
@@ -49,7 +59,7 @@ nav {
     -moz-transition: all .2s ease-in-out;
     background-color: white; }
   nav div .navdisplay div {
-    background-color: #ed1c24; }
+    background-color: #ff2800; }
   nav div .navhide:before {
     transform: translateY(9px) rotate(135deg); }
   nav div .navhide:after {
@@ -57,7 +67,7 @@ nav {
   nav div .navhide div {
     transform: scale(0); }
   nav div div {
-    color: #ed1c24 !important; }
+    color: #ff2800 !important; }
     nav div div ul .active:after {
       border-radius: 3px;
       content: '';
@@ -67,7 +77,7 @@ nav {
       transition: all .2s ease-in-out;
       -webkit-transition: all .2s ease-in-out;
       -moz-transition: all .2s ease-in-out;
-      background-color: #ed1c24; }
+      background-color: #ff2800; }
     nav div div ul a {
       text-align: center;
       color: floralwhite;
@@ -90,11 +100,25 @@ nav {
   .navbar-brand img {
     height: 70px;
     width: 54px; }
-  .navbar-brand span {
-    color: #ed1c24; }
+  .navbar-brand div:nth-child(2) {
+    color: white !important; }
 
 .navbar-brand:hover {
   color: white; }
+
+@keyframes navanimate {
+  from {
+    transform: translateY(-100px); }
+  to {
+    transform: translateY(0px); } }
+
+.navanimate {
+  animation-name: navanimate;
+  animation-duration: 0.5s; }
+
+@media screen and (max-width: 767px) {
+  nav div div ul a {
+    font-size: medium; } }
 
 @media screen and (max-width: 766px) {
   nav.navbar.navbar-inverse {
@@ -102,6 +126,7 @@ nav {
     nav.navbar.navbar-inverse div.container {
       padding: 0px; }
     nav.navbar.navbar-inverse div.navbar.navbar-expand-md {
+      width: 100%;
       padding: 0px; }
       nav.navbar.navbar-inverse div.navbar.navbar-expand-md div.collapse.navbar-collapse {
         padding: 0px; }
@@ -111,15 +136,14 @@ nav {
             padding: 20px;
             margin: 0px -47px;
             width: 100%;
-            font-weight: 900; }
+            font-size: large; }
           nav.navbar.navbar-inverse div.navbar.navbar-expand-md div.collapse.navbar-collapse ul .active {
-            background-color: #ed1c24;
-            transition: 1s; }
+            background-color: #ff2800;
+            transition: 0s; }
           nav.navbar.navbar-inverse div.navbar.navbar-expand-md div.collapse.navbar-collapse ul .active:after {
-            margin: 0px;
-            width: 0px;
+            background-color: transparent;
             height: 0px;
-            background-color: transparent; }
+            margin: 0px; }
   .navbar-brand {
     margin: 5px;
     margin-left: 20px; }
@@ -128,3 +152,13 @@ nav {
       width: 48.6px; }
   .navdisplay {
     margin-right: 15px; } }
+
+#body .col-sm-6:nth-child(1) {
+  background-image: url(./resources/img/logo.jpg);
+  padding: 0px; }
+
+@media screen and (max-width: 766px) {
+  #body .col-sm-6:nth-child(2) .frame {
+    position: absolute;
+    top: 30%;
+    height: 60%; } }
