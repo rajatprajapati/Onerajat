@@ -1,0 +1,4 @@
+!node_modules
+node_modules/*
+!node_modules/font-awesome
+!node_modules/bootstrap-social
