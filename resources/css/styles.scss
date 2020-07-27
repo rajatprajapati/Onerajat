@@ -50,6 +50,13 @@ h6 {
     border: none;
 }
 
+.fa-instagram:before,
+.fa-twitter:before,
+.fa-facebook:before,
+.fa-linkedin:before {
+    color: white;
+}
+
 .btn {
     padding: .2rem .5rem;
 }
