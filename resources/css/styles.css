@@ -329,9 +329,9 @@ nav {
   font-family: "futura";
   font-weight: 700;
   color: lightgrey;
-  padding: 0px;
   display: flex;
-  margin: 5px 0px; }
+  margin: 5px 0px;
+  text-align: center; }
   .progress-label div {
     position: absolute;
     bottom: 1px;
