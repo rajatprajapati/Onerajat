@@ -247,6 +247,7 @@ nav {
     #body .col-sm-6:nth-child(2) .name {
       color: #414142;
       padding: 0px;
+      letter-spacing: 2px;
       text-align: center;
       font-family: "avenir bold";
       font-size: xxx-large; }
@@ -318,6 +319,12 @@ nav {
     position: relative;
     overflow: visible; }
 
+.padding-0 {
+  padding: 0px; }
+
+.d-flex {
+  flex-wrap: wrap; }
+
 .progress-label {
   font-family: "futura";
   font-weight: 700;
@@ -333,3 +340,29 @@ nav {
 
 .height-fit {
   height: fit-content; }
+
+.bar {
+  padding: 0px 5px; }
+
+.headings {
+  font-family: "avenir";
+  color: lightgrey;
+  font-size: x-large;
+  font-weight: 900;
+  text-align: center; }
+  .headings span {
+    color: #ff2800; }
+
+.card {
+  background-color: transparent; }
+  .card .card-header {
+    border: 1px solid grey; }
+  .card a {
+    text-decoration: none;
+    color: lightgrey; }
+  .card a:hover {
+    color: lightgrey; }
+  .card .card-body {
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap; }

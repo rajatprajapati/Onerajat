@@ -333,6 +333,7 @@ nav {
         .name {
             color: $grey;
             padding: 0px;
+            letter-spacing: 2px;
             text-align: center;
             font-family: $avenir-bold;
             font-size: xxx-large;
@@ -429,6 +430,14 @@ nav {
     }
 }
 
+.padding-0 {
+    padding: 0px;
+}
+
+.d-flex {
+    flex-wrap: wrap;
+}
+
 // .progress-bar-red:after {
 //     position: absolute;
 //     top: -2px;
@@ -459,4 +468,38 @@ nav {
 
 .height-fit {
     height: fit-content;
+}
+
+.bar {
+    padding: 0px 5px;
+}
+
+.headings {
+    font-family: $avenir;
+    color: lightgrey;
+    font-size: x-large;
+    font-weight: 900;
+    text-align: center;
+    span {
+        color: $red;
+    }
+}
+
+.card {
+    background-color: transparent;
+    .card-header {
+        border: 1px solid grey;
+    }
+    a {
+        text-decoration: none;
+        color: lightgrey;
+    }
+    a:hover {
+        color: lightgrey;
+    }
+    .card-body {
+        padding: 0px;
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
