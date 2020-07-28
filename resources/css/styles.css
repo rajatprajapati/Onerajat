@@ -26,6 +26,10 @@ h6 {
   font-family: "avenir bold";
   font-weight: 900; }
 
+p {
+  font-family: "futura" !important;
+  color: lightgrey; }
+
 .row {
   width: 100%;
   margin: 0px; }
@@ -137,8 +141,12 @@ nav {
   animation-duration: 0.5s; }
 
 @media screen and (max-width: 1280px) {
-  nav div div ul a {
-    font-size: small; } }
+  nav.navbar.navbar-inverse div.container-fluid {
+    padding: 0px; }
+    nav.navbar.navbar-inverse div.container-fluid div.navbar {
+      padding: 0px; }
+      nav.navbar.navbar-inverse div.container-fluid div.navbar ul a {
+        font-size: small; } }
 
 @media screen and (max-width: 766px) {
   nav.navbar.navbar-inverse {
@@ -172,20 +180,6 @@ nav {
       width: 48.6px; }
   .navdisplay {
     margin-right: 15px; } }
-
-.full-height-width {
-  height: 100vh;
-  width: 100vw;
-  z-index: 10;
-  top: 0px;
-  background-color: black;
-  position: fixed; }
-
-.full-height-width.zero-width {
-  width: 0px;
-  transition: 1s;
-  transition-delay: 1s;
-  transition-timing-function: ease-in-out; }
 
 @keyframes bodyanimate {
   from {
@@ -236,8 +230,6 @@ nav {
       text-align: center;
       font-family: "avenir bold";
       font-size: xxx-large; }
-      #body .col-sm-6:nth-child(2) .name span {
-        color: #ff2800; }
     #body .col-sm-6:nth-child(2) .designation {
       font-family: "futura";
       text-align: center;
@@ -250,6 +242,13 @@ nav {
       color: grey;
       font-size: 50px;
       line-height: 90px; }
+
+@media screen and (max-width: 1025px) {
+  #body .col-sm-6:nth-child(2) .works,
+  #body .col-sm-6:nth-child(2) .works-2,
+  #body .col-sm-6:nth-child(2) .works-3 {
+    line-height: 42px;
+    font-size: xx-large; } }
 
 @media screen and (max-width: 766px) {
   .full-height-width.zero-width {
@@ -267,9 +266,16 @@ nav {
       #body .col-sm-6:nth-child(2) .name {
         font-size: xx-large; }
       #body .col-sm-6:nth-child(2) .designation {
-        font-size: large; }
-      #body .col-sm-6:nth-child(2) .works,
-      #body .col-sm-6:nth-child(2) .works-2,
-      #body .col-sm-6:nth-child(2) .works-3 {
-        line-height: 42px;
-        font-size: xx-large; } }
+        font-size: large; } }
+
+#about {
+  background-color: #414142; }
+
+.name {
+  font-family: "avenir";
+  text-align: center;
+  padding: 30px;
+  font-weight: 900;
+  color: white; }
+  .name span {
+    color: #ff2800; }
