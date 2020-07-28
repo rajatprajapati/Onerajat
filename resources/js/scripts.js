@@ -23,10 +23,17 @@ $(document).ready(function() {
     $('.full-height-width').addClass('zero-width');
 });
 window.onload = function() {
-    setTimeout(() => {
-        // document.getElementsByClassName('bodyanimate').classList.add('visible');
-        $('.bodyanimate').addClass('visible');
-    }, 1000);
+    if (window.matchMedia("(max-width: 766px)").matches) {
+        setTimeout(() => {
+            // document.getElementsByClassName('bodyanimate').classList.add('visible');
+            $('.bodyanimate').addClass('visible');
+        }, 1500);
+    } else {
+        setTimeout(() => {
+            // document.getElementsByClassName('bodyanimate').classList.add('visible');
+            $('.bodyanimate').addClass('visible');
+        }, 1000);
+    }
 }
 
 window.onscroll = function() { hidefunction() }

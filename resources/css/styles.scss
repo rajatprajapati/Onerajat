@@ -342,30 +342,32 @@ nav {
     }
 }
 
-.lineheightanimate {
-    animation-name: lineheightanimate;
-    animation-duration: 0.5s;
-    animation-timing-function: ease-in-out;
-}
-
-@keyframes lineheightanimate {
-    from {
-        line-height: 0px;
-    }
-    to {
-        line-height: 90px;
-    }
-}
-
+// .lineheightanimate {
+//     animation-name: lineheightanimate;
+//     animation-duration: 0.5s;
+//     animation-timing-function: ease-in-out;
+// }
+// @keyframes lineheightanimate {
+//     from {
+//         line-height: 0px;
+//     }
+//     to {
+//         line-height: 90px;
+//     }
+// }
 @media screen and (max-width:766px) {
-    @keyframes lineheightanimate {
-        from {
-            line-height: 0px;
-        }
-        to {
-            line-height: 42px;
-        }
+    .full-height-width.zero-width {
+        transition: 1s;
+        transition-delay: 1s;
     }
+    // @keyframes lineheightanimate {
+    //     from {
+    //         line-height: 0px;
+    //     }
+    //     to {
+    //         line-height: 42px;
+    //     }
+    // }
     #body {
         background-color: $grey;
         padding-top: 7vh;
