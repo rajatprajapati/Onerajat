@@ -343,32 +343,11 @@ nav {
     }
 }
 
-// .lineheightanimate {
-//     animation-name: lineheightanimate;
-//     animation-duration: 0.5s;
-//     animation-timing-function: ease-in-out;
-// }
-// @keyframes lineheightanimate {
-//     from {
-//         line-height: 0px;
-//     }
-//     to {
-//         line-height: 90px;
-//     }
-// }
 @media screen and (max-width:766px) {
     .full-height-width.zero-width {
         transition: 1s;
         transition-delay: 1s;
     }
-    // @keyframes lineheightanimate {
-    //     from {
-    //         line-height: 0px;
-    //     }
-    //     to {
-    //         line-height: 42px;
-    //     }
-    // }
     #body {
         background-color: $grey;
         padding-top: 7vh;
@@ -389,7 +368,7 @@ nav {
             .works-2,
             .works-3 {
                 line-height: 42px;
-                font-size: 38px!important;
+                font-size: xx-large;
             }
         }
     }
