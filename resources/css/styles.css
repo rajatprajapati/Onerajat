@@ -241,6 +241,7 @@ nav {
         margin: auto; }
     #body .col-sm-6:nth-child(2) .name {
       color: #414142;
+      padding: 0px;
       text-align: center;
       font-family: "avenir bold";
       font-size: xxx-large; }
@@ -289,6 +290,7 @@ nav {
   font-family: "avenir";
   text-align: center;
   font-weight: 900;
-  color: white; }
+  color: white;
+  padding-top: 30px; }
   .name span {
     color: #ff2800; }
