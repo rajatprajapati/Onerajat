@@ -29,6 +29,10 @@ $avenir-bold: "avenir bold";
     outline: none!important;
 }
 
+* {
+    overflow-x: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -36,6 +40,7 @@ h4,
 h5,
 h6 {
     font-family: $avenir-bold;
+    overflow-y: hidden;
     font-weight: 900;
 }
 
@@ -266,7 +271,7 @@ nav {
 }
 
 .full-height-width.zero-width {
-    width: 0px;
+    height: 0px;
     transition: 1s;
     transition-delay: 1s;
     transition-timing-function: ease-in-out;
@@ -274,7 +279,7 @@ nav {
 
 @keyframes bodyanimate {
     from {
-        transform: translateY(100px);
+        transform: translateX(500px);
         visibility: visible;
         opacity: 0;
     }
@@ -404,32 +409,52 @@ nav {
 }
 
 .progress {
-    background-color: lightgrey;
+    background-color: $red;
     height: 8px;
     padding: 0px;
-    margin: auto;
+    margin: auto 0px;
+    overflow: hidden;
     .progress-bar-red {
-        background-color: $red;
-        div {
-            top: -22px;
-            position: absolute;
-            font-weight: 900;
-            color: lightgrey;
-        }
-    }
-    .progress-bar-red:after {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
+        background-color: black;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        font-size: 12px;
+        line-height: 1.2;
+        color: #000;
+        font-weight: 600;
+        text-align: right;
+        position: relative;
+        overflow: visible;
+        // overflow: hidden;
     }
 }
 
+// .progress-bar-red:after {
+//     position: absolute;
+//     top: -2px;
+//     right: 0;
+//     width: 16px;
+//     height: 16px;
+//     content: '';
+//     background: #2c98f0;
+//     -webkit-border-radius: 50%;
+//     -moz-border-radius: 50%;
+//     -ms-border-radius: 50%;
+//     border-radius: 50%;
+// }
 .progress-label {
     font-family: $futura;
     font-weight: 700;
     color: lightgrey;
     padding: 0px;
+    display: flex;
     margin: 5px 0px;
+    div {
+        position: absolute;
+        bottom: 1px;
+        font-weight: 900;
+        color: lightgrey;
+    }
 }
 
 .height-fit {
