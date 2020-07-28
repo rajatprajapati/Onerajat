@@ -23,6 +23,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: "avenir bold";
   font-weight: 900; }
 
 .row {
@@ -233,7 +234,7 @@ nav {
     #body .col-sm-6:nth-child(2) .name {
       color: #414142;
       text-align: center;
-      font-family: "avenir";
+      font-family: "avenir bold";
       font-size: xxx-large; }
       #body .col-sm-6:nth-child(2) .name span {
         color: #ff2800; }
@@ -244,9 +245,10 @@ nav {
     #body .col-sm-6:nth-child(2) .works,
     #body .col-sm-6:nth-child(2) .works-2,
     #body .col-sm-6:nth-child(2) .works-3 {
-      font-family: "avenir bold";
+      font-family: "avenir";
+      font-weight: 900;
       color: grey;
-      font-size: 69px;
+      font-size: 50px;
       line-height: 90px; }
 
 @media screen and (max-width: 766px) {

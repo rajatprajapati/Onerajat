@@ -35,7 +35,7 @@ h3,
 h4,
 h5,
 h6 {
-    // font-family: $avenir;
+    font-family: $avenir-bold;
     font-weight: 900;
 }
 
@@ -320,7 +320,7 @@ nav {
         .name {
             color: $grey;
             text-align: center;
-            font-family: $avenir;
+            font-family: $avenir-bold;
             font-size: xxx-large;
             span {
                 color: $red;
@@ -334,9 +334,10 @@ nav {
         .works,
         .works-2,
         .works-3 {
-            font-family: $avenir-bold;
+            font-family: $avenir;
+            font-weight: 900;
             color: grey;
-            font-size: 69px;
+            font-size: 50px;
             line-height: 90px;
         }
     }
