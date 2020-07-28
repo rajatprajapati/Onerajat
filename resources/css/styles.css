@@ -28,6 +28,7 @@ h6 {
 
 p {
   font-family: "futura" !important;
+  text-align: justify;
   color: lightgrey; }
 
 .row {
@@ -199,7 +200,7 @@ nav {
   from {
     transform: translateY(100px);
     visibility: visible;
-    opacity: 0; }
+    opacity: 1; }
   to {
     transform: translateY(0px);
     opacity: 1;
@@ -294,3 +295,30 @@ nav {
   padding-top: 30px; }
   .name span {
     color: #ff2800; }
+
+.progress {
+  background-color: lightgrey;
+  height: 8px;
+  padding: 0px;
+  margin: auto; }
+  .progress .progress-bar-red {
+    background-color: #ff2800; }
+    .progress .progress-bar-red div {
+      top: -22px;
+      position: absolute;
+      font-weight: 900;
+      color: lightgrey; }
+  .progress .progress-bar-red:after {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%; }
+
+.progress-label {
+  font-family: "futura";
+  font-weight: 700;
+  color: lightgrey;
+  padding: 0px;
+  margin: 5px 0px; }
+
+.height-fit {
+  height: fit-content; }
