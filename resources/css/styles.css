@@ -8,6 +8,11 @@
   font-family: "avenir";
   font-display: swap; }
 
+@font-face {
+  src: url(../fonts/avenirbold.ttf);
+  font-family: "avenir bold";
+  font-display: swap; }
+
 *:focus,
 *:active {
   outline: none !important; }
@@ -27,6 +32,13 @@ h6 {
 .container-fluid {
   padding: 0px; }
 
+#header {
+  width: 100%;
+  z-index: 1; }
+
+.fa {
+  font-weight: 900; }
+
 .btn-instagram,
 .btn-twitter,
 .btn-facebook,
@@ -45,8 +57,9 @@ h6 {
 
 nav {
   background-color: #414142;
-  color: #ff2800;
-  box-shadow: 4px 7px white; }
+  color: #ff2800; }
+  nav div.container-fluid {
+    padding: 0 30px; }
   nav div a.navbar-brand {
     font-family: "futura"; }
   nav div .navdisplay {
@@ -89,7 +102,7 @@ nav {
       color: floralwhite;
       margin: 10px;
       text-transform: uppercase;
-      font-size: large;
+      font-size: medium;
       letter-spacing: 2px; }
     nav div div ul a:hover {
       color: white;
@@ -129,7 +142,7 @@ nav {
 @media screen and (max-width: 766px) {
   nav.navbar.navbar-inverse {
     padding: 0px; }
-    nav.navbar.navbar-inverse div.container {
+    nav.navbar.navbar-inverse div.container-fluid {
       padding: 0px; }
     nav.navbar.navbar-inverse div.navbar.navbar-expand-md {
       width: 100%;
@@ -159,45 +172,115 @@ nav {
   .navdisplay {
     margin-right: 15px; } }
 
-#body .col-sm-6:nth-child(1) {
-  background-image: url(../img/logo.jpg);
-  padding: 0px;
+.full-height-width {
   height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed; }
-  #body .col-sm-6:nth-child(1) .frame {
-    width: 80%;
-    height: 50%; }
+  width: 100vw;
+  z-index: 10;
+  top: 0px;
+  background-color: black;
+  position: fixed; }
 
-#body .col-sm-6:nth-child(2) {
-  height: 100vh;
-  padding: 30px;
-  background-color: white; }
-  #body .col-sm-6:nth-child(2) .container {
-    padding: 15px;
-    height: 100%; }
-  #body .col-sm-6:nth-child(2) .name {
-    color: #414142;
-    text-align: center;
-    font-family: "avenir";
-    font-size: xxx-large; }
-    #body .col-sm-6:nth-child(2) .name span {
-      color: #ff2800; }
-  #body .col-sm-6:nth-child(2) .designation {
-    font-family: "futura";
-    text-align: center;
-    font-size: x-large; }
+.full-height-width.zero-width {
+  width: 0px;
+  transition: 2s;
+  transition-delay: 1s;
+  transition-timing-function: ease-in-out; }
+
+@keyframes bodyanimate {
+  from {
+    transform: translateY(100px);
+    visibility: visible;
+    opacity: 0; }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+    visibility: visible; } }
+
+.bodyanimate.visible {
+  visibility: visible; }
+
+.bodyanimate {
+  visibility: hidden;
+  animation-name: bodyanimate !important;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-timing-function: ease-in-out; }
+
+#body {
+  padding-top: 14vh;
+  position: relative; }
+  #body .col-sm-6:nth-child(1) {
+    background-image: url(../img/logo.jpg);
+    padding: 0px;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; }
+    #body .col-sm-6:nth-child(1) .frame {
+      width: 80%;
+      height: 50%; }
+  #body .col-sm-6:nth-child(2) {
+    height: 100vh;
+    padding: 30px;
+    background-color: white; }
+    #body .col-sm-6:nth-child(2) .container {
+      padding: 15px;
+      height: 100%;
+      display: flex; }
+      #body .col-sm-6:nth-child(2) .container div {
+        margin: auto; }
+    #body .col-sm-6:nth-child(2) .name {
+      color: #414142;
+      text-align: center;
+      font-family: "avenir";
+      font-size: xxx-large; }
+      #body .col-sm-6:nth-child(2) .name span {
+        color: #ff2800; }
+    #body .col-sm-6:nth-child(2) .designation {
+      font-family: "futura";
+      text-align: center;
+      font-size: x-large; }
+    #body .col-sm-6:nth-child(2) .works,
+    #body .col-sm-6:nth-child(2) .works-2,
+    #body .col-sm-6:nth-child(2) .works-3 {
+      font-family: "avenir bold";
+      color: grey;
+      font-size: 69px;
+      line-height: 90px; }
+
+.lineheightanimate {
+  animation-name: lineheightanimate;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out; }
+
+@keyframes lineheightanimate {
+  from {
+    line-height: 0px; }
+  to {
+    line-height: 90px; } }
 
 @media screen and (max-width: 766px) {
-  #body .col-sm-6:nth-child(1) {
-    height: 50vh;
-    background-attachment: scroll;
-    background-size: cover; }
-  #body .col-sm-6:nth-child(2) {
-    height: 50vh; }
-    #body .col-sm-6:nth-child(2) .name {
-      font-size: xx-large; }
-    #body .col-sm-6:nth-child(2) .designation {
-      font-size: large; } }
+  @keyframes lineheightanimate {
+    from {
+      line-height: 0px; }
+    to {
+      line-height: 42px; } }
+  #body {
+    background-color: #414142;
+    padding-top: 7vh; }
+    #body .col-sm-6:nth-child(1) {
+      height: 50vh;
+      background-attachment: scroll;
+      background-size: cover; }
+    #body .col-sm-6:nth-child(2) {
+      height: 50vh; }
+      #body .col-sm-6:nth-child(2) .name {
+        font-size: xx-large; }
+      #body .col-sm-6:nth-child(2) .designation {
+        font-size: large; }
+      #body .col-sm-6:nth-child(2) .works,
+      #body .col-sm-6:nth-child(2) .works-2,
+      #body .col-sm-6:nth-child(2) .works-3 {
+        line-height: 42px;
+        font-size: 38px !important; } }

@@ -15,8 +15,15 @@ $high-margin: 20px;
     font-display: swap;
 }
 
+@font-face {
+    src: url(../fonts/avenirbold.ttf);
+    font-family: "avenir bold";
+    font-display: swap;
+}
+
 $futura: "futura";
 $avenir: "avenir";
+$avenir-bold: "avenir bold";
 *:focus,
 *:active {
     outline: none!important;
@@ -42,6 +49,15 @@ h6 {
 }
 
 // nav
+#header {
+    width: 100%;
+    z-index: 1;
+}
+
+.fa {
+    font-weight: 900;
+}
+
 .btn-instagram,
 .btn-twitter,
 .btn-facebook,
@@ -64,7 +80,9 @@ h6 {
 nav {
     background-color: $grey;
     color: $red;
-    box-shadow: 4px 7px white;
+    div.container-fluid {
+        padding: 0 30px;
+    }
     div {
         a.navbar-brand {
             font-family: $futura;
@@ -120,7 +138,7 @@ nav {
                     color: floralwhite;
                     margin: $med-margin;
                     text-transform: uppercase;
-                    font-size: large;
+                    font-size: medium;
                     letter-spacing: 2px;
                 }
                 a:hover {
@@ -186,7 +204,7 @@ nav {
 @media screen and (max-width: 766px) {
     nav.navbar.navbar-inverse {
         padding: 0px;
-        div.container {
+        div.container-fluid {
             padding: 0px;
         }
         div.navbar.navbar-expand-md {
@@ -230,7 +248,50 @@ nav {
 }
 
 // body
+.full-height-width {
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+    top: 0px;
+    background-color: black;
+    position: fixed;
+}
+
+.full-height-width.zero-width {
+    width: 0px;
+    transition: 2s;
+    transition-delay: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+@keyframes bodyanimate {
+    from {
+        transform: translateY(100px);
+        visibility: visible;
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.bodyanimate.visible {
+    visibility: visible;
+}
+
+.bodyanimate {
+    visibility: hidden;
+    animation-name: bodyanimate !important;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+}
+
 #body {
+    padding-top: 14vh;
+    position: relative;
     .col-sm-6:nth-child(1) {
         background-image: url(../img/logo.jpg);
         padding: 0px;
@@ -251,6 +312,10 @@ nav {
         .container {
             padding: 15px;
             height: 100%;
+            display: flex;
+            div {
+                margin: auto;
+            }
         }
         .name {
             color: $grey;
@@ -266,11 +331,44 @@ nav {
             text-align: center;
             font-size: x-large;
         }
+        .works,
+        .works-2,
+        .works-3 {
+            font-family: $avenir-bold;
+            color: grey;
+            font-size: 69px;
+            line-height: 90px;
+        }
+    }
+}
+
+.lineheightanimate {
+    animation-name: lineheightanimate;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes lineheightanimate {
+    from {
+        line-height: 0px;
+    }
+    to {
+        line-height: 90px;
     }
 }
 
 @media screen and (max-width:766px) {
+    @keyframes lineheightanimate {
+        from {
+            line-height: 0px;
+        }
+        to {
+            line-height: 42px;
+        }
+    }
     #body {
+        background-color: $grey;
+        padding-top: 7vh;
         .col-sm-6:nth-child(1) {
             height: 50vh;
             background-attachment: scroll;
@@ -283,6 +381,12 @@ nav {
             }
             .designation {
                 font-size: large;
+            }
+            .works,
+            .works-2,
+            .works-3 {
+                line-height: 42px;
+                font-size: 38px!important;
             }
         }
     }
