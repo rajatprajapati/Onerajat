@@ -443,12 +443,14 @@ nav {
       text-transform: uppercase; }
 
 .hobbies .col-12,
-.hobbies .col-2 {
+.hobbies .col-lg-2,
+.hobbies .col-3 {
   padding: 0px;
   text-align: center;
   color: white; }
 
-.hobbies .col-2 {
+.hobbies .col-3,
+.hobbies .col-lg-2 {
   margin: 0 1%; }
 
 .hobbies .fa {
