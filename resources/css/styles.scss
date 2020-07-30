@@ -411,6 +411,25 @@ nav {
     }
 }
 
+@media screen and (max-width:404px) {
+    #body {
+        .col-sm-6:nth-child(2) {
+            .name {
+                font-size: x-large;
+            }
+            .designation {
+                font-size: medium;
+            }
+            .works,
+            .works-2,
+            .works-3 {
+                line-height: 38px;
+                font-size: large;
+            }
+        }
+    }
+}
+
 // about
 #about {
     background-color: $grey;
@@ -450,6 +469,10 @@ nav {
 
 .padding-0 {
     padding: 0px;
+}
+
+.padding-1 {
+    padding: 0px 15px;
 }
 
 .d-flex {

@@ -303,6 +303,17 @@ nav {
       #body .col-sm-6:nth-child(2) .designation {
         font-size: large; } }
 
+@media screen and (max-width: 404px) {
+  #body .col-sm-6:nth-child(2) .name {
+    font-size: x-large; }
+  #body .col-sm-6:nth-child(2) .designation {
+    font-size: medium; }
+  #body .col-sm-6:nth-child(2) .works,
+  #body .col-sm-6:nth-child(2) .works-2,
+  #body .col-sm-6:nth-child(2) .works-3 {
+    line-height: 38px;
+    font-size: large; } }
+
 #about {
   background-color: #414142; }
 
@@ -335,6 +346,9 @@ nav {
 
 .padding-0 {
   padding: 0px; }
+
+.padding-1 {
+  padding: 0px 15px; }
 
 .d-flex {
   flex-wrap: wrap; }
