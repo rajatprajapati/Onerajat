@@ -613,3 +613,24 @@ nav {
         }
     }
 }
+
+.hobbies {
+    .col-12,
+    .col-2 {
+        padding: 0px;
+        text-align: center;
+        color: white;
+    }
+    .col-2 {
+        margin: 0 1%;
+    }
+    .fa {
+        font-size: xxx-large;
+        color: lightgrey;
+        font-weight: 100;
+        display: flex;
+    }
+    .fa:before {
+        margin: auto;
+    }
+}

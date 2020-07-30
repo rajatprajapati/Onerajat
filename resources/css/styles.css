@@ -441,3 +441,21 @@ nav {
     .achievements li strong {
       color: #ff2800;
       text-transform: uppercase; }
+
+.hobbies .col-12,
+.hobbies .col-2 {
+  padding: 0px;
+  text-align: center;
+  color: white; }
+
+.hobbies .col-2 {
+  margin: 0 1%; }
+
+.hobbies .fa {
+  font-size: xxx-large;
+  color: lightgrey;
+  font-weight: 100;
+  display: flex; }
+
+.hobbies .fa:before {
+  margin: auto; }
